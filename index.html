@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Responsive Redesign</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<div class="main">
+		<div class="col1">
+			<h1>redesign</h1>
+			<h2>Rethinking the Laguna Niguel Evacuation Zones web page.</h2>
+			<p>This five-part project involved analyzing and reconstructing the Evacuation Zones webpage for Laguna Niguel, CA.</p> 
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="col1">
+			<h3>one</h3>
+			<h2>current design</h2>
+			<p>The following is a screenshot of the current Laguna Niguel Evacuation Zones <a href="https://www.cityoflagunaniguel.org/1412/Evacuation-Zones">page.</a> Click through the following tabs to read about identified problems.</p>
+			<div class="spaced-row">
+				<h2 class="option" id="learnability-tab" onclick="switchTab('l')">learnability</h2>
+				<h2 class="option unclicked" id="memorability-tab" onclick="switchTab('m')">memorability</h2>
+				<h2 class="option unclicked" id="efficiency-tab" onclick="switchTab('e')">efficiency</h2>
+				<h2 class="option unclicked" id="accessibility-tab" onclick="switchTab('a')">accessibility</h2>
+			</div>
+			<ul id="learnability-text">
+				<li><h3>Primary functions of web page (finding your evacuation zone, understanding what you may need in event of a fire) are hidden within a large body of text and menus</h3></li>
+				<li><h3>Secondary functions (subscribing to fire/emergency alert services) require scrolling to very bottom of page, these can also be confused with the large “Notify Me” button</h3></li>
+			</ul>
+			<ul id="memorability-text" style="display: none">
+				<li><h3>Users may remember a large blue button that says “View Evacuation Zone Map” if they have seen the page before, however this button is not immediately visible and requires scrolling past a large body of text.</h3></li>
+				<li><h3>The Evacuation Zones page is contained in Home>What’s New>Public Safety pages, which is entirely unintuitive, as there also exists a tab for Emergency Preparedness </h3></li>
+			</ul>
+			<ul id="efficiency-text" style="display: none">
+				<li><h3>Users who want to check their evacuation zone must scroll through the page, open up a PDF containing a map of the evacuation zones and find their address on the map — this takes significant effort</h3></li>
+				<li><h3>Users who want to review their fire preparedness must scroll through the page, open up a PDF first containing the map, scroll through the PDF to a page with a 2D grid of items, then if the user wants to check items off they must print the sheet</h3></li>
+			</ul>
+			<ul id="accessibility-text" style="display: none">
+				<li><h3>WAVE detected contrast errors with the call-to-action text directing users to subscribe to emergency alert services. I definitely agree with the findings — the page uses a pale green color for this text — it’s used nowhere else on the page, it’s hard to read, and it doesn’t communicate that it’s an important item for users to complete for emergency preparedness</h3></li>
+			</ul>
+		</div>
+		<div class="col2">
+			<img src="./currentdesign.png" style="width:  100%; height: auto" />
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="col1">
+			<h3>two</h3>
+			<h2>wireframes</h2>
+			<p>The following are low-fidelity wireframes in desktop, tablet and phone sizes.</p>
+			<div class="spaced-row">
+				<h2 class="option" id="desktop-wire-tab" onclick="switchTabWires('d')">Desktop</h2>
+				<h2 class="option unclicked" id="tablet-wire-tab" onclick="switchTabWires('t')">Tablet</h2>
+				<h2 class="option unclicked" id="mobile-wire-tab" onclick="switchTabWires('m')">Mobile</h2>
+			</div>
+		</div>
+		<div class="col2" style="display: flex; justify-content: center;">
+			<img src="./Desktop.png" id="desktop-wire" style="width:  60%; height: auto" />
+			<img src="./Tablet.png" id="tablet-wire" style="width:  60%; height: auto; display: none" />
+			<img src="./Phone.png" id="mobile-wire" style="width:  40%; height: auto; display: none" />
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="col1">
+			<h3>three</h3>
+			<h2>style guide</h2>
+			<p>The following is a style guide for the redesigned web page.</p>
+		</div>
+		<div class="col2" style="display: flex; justify-content: center;">
+			<img src="./styleguide.png" id="desktop-wire" style="width:  100%; height: auto" />
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="col1">
+			<h3>four</h3>
+			<h2>prototype</h2>
+			<p>The following is a hi-fidelity prototype for the redesign in desktop, tablet and mobile sizing. Attached are annotations describing the responsive layouts using flexbox.</p>
+		<div class="spaced-row">
+				<h2 class="option" id="desktop-hires-tab" onclick="switchTabHires('d')">Desktop</h2>
+				<h2 class="option unclicked" id="tablet-hires-tab" onclick="switchTabHires('t')">Tablet</h2>
+				<h2 class="option unclicked" id="mobile-hires-tab" onclick="switchTabHires('m')">Mobile</h2>
+			</div>
+		</div>
+		<div class="col2" style="display: flex; justify-content: center;">
+			<img src="./desktophires.png" id="desktop-hires" style="width:  100%; height: auto" />
+			<img src="./tablethires.png" id="tablet-hires" style="width:  100%; height: auto; display: none" />
+			<img src="./phonehires.png" id="mobile-hires" style="width:  40%; height: auto; display: none" />
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="col1">
+			<h3>five</h3>
+			<h2>page</h2>
+			<p><a href="./city.html">Here</a> is a link to the fully-redesigned layout!<br><br>Try out the responsiveness by changing the width of the screen.</p>
+	</div>
+
+	<script>
+		function switchTab(tab) {
+			document.getElementById("learnability-tab").classList.add("unclicked");
+			document.getElementById("memorability-tab").classList.add("unclicked");
+			document.getElementById("efficiency-tab").classList.add("unclicked");
+			document.getElementById("accessibility-tab").classList.add("unclicked");
+
+			document.getElementById("learnability-text").style.display = 'none';
+			document.getElementById("memorability-text").style.display = 'none';
+			document.getElementById("efficiency-text").style.display = 'none';
+			document.getElementById("accessibility-text").style.display = 'none';
+
+
+			if (tab == "l") {
+				document.getElementById("learnability-tab").classList.remove("unclicked");
+				document.getElementById("learnability-text").style.display = 'block';
+			} else if (tab == "m") {
+				document.getElementById("memorability-tab").classList.remove("unclicked");
+				document.getElementById("memorability-text").style.display = 'block';
+			} else if (tab == "a") {
+				document.getElementById("accessibility-tab").classList.remove("unclicked");
+				document.getElementById("accessibility-text").style.display = 'block';
+			} else if (tab == "e") {
+				document.getElementById("efficiency-tab").classList.remove("unclicked");
+				document.getElementById("efficiency-text").style.display = 'block';
+			}
+		}
+
+		function switchTabWires(tab) {
+			document.getElementById("desktop-wire-tab").classList.add("unclicked");
+			document.getElementById("tablet-wire-tab").classList.add("unclicked");
+			document.getElementById("mobile-wire-tab").classList.add("unclicked");
+
+			document.getElementById("desktop-wire").style.display = 'none';
+			document.getElementById("tablet-wire").style.display = 'none';
+			document.getElementById("mobile-wire").style.display = 'none';
+
+
+			if (tab == "d") {
+				document.getElementById("desktop-wire-tab").classList.remove("unclicked");
+				document.getElementById("desktop-wire").style.display = 'block';
+			} else if (tab == "t") {
+				document.getElementById("tablet-wire-tab").classList.remove("unclicked");
+				document.getElementById("tablet-wire").style.display = 'block';
+			} else if (tab == "m") {
+				document.getElementById("mobile-wire-tab").classList.remove("unclicked");
+				document.getElementById("mobile-wire").style.display = 'block';
+			}
+		}
+
+		function switchTabHires(tab) {
+			document.getElementById("desktop-hires-tab").classList.add("unclicked");
+			document.getElementById("tablet-hires-tab").classList.add("unclicked");
+			document.getElementById("mobile-hires-tab").classList.add("unclicked");
+
+			document.getElementById("desktop-hires").style.display = 'none';
+			document.getElementById("tablet-hires").style.display = 'none';
+			document.getElementById("mobile-hires").style.display = 'none';
+
+
+			if (tab == "d") {
+				document.getElementById("desktop-hires-tab").classList.remove("unclicked");
+				document.getElementById("desktop-hires").style.display = 'block';
+			} else if (tab == "t") {
+				document.getElementById("tablet-hires-tab").classList.remove("unclicked");
+				document.getElementById("tablet-hires").style.display = 'block';
+			} else if (tab == "m") {
+				document.getElementById("mobile-hires-tab").classList.remove("unclicked");
+				document.getElementById("mobile-hires").style.display = 'block';
+			}
+		}
+	</script>
+
+</body>
+</html>
